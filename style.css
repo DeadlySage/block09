@@ -1,9 +1,30 @@
 html {
-    font-size: large;
+  font-size: large;
+}
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
 }
 
 .icon-color-white {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
+.content {
+  display: flex;
+  padding-top: 1rem;
+}
+
+.my-profile-img {
+  border-radius: 1%;
+}
+
+.my-profile-text {
+  margin-left: 2rem;
+}
+
+.my-hobby-img {
+  border-radius: 2%;
+}
