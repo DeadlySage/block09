@@ -12,9 +12,62 @@ body {
   text-decoration: none;
 }
 
+/*use flex for content box*/
 .content {
   display: flex;
   padding-top: 1rem;
+  justify-content: center;
+}
+
+/*if on mobile, flex-wrap*/
+@media screen and (max-width: 400px) {
+  .content {
+    flex-wrap: wrap;
+  }
+}
+
+/*if on mobile rearange content*/
+@media screen and (max-width: 400px) {
+  .content {
+    flex-flow: column;
+  }
+
+  .my-text-right {
+    order: 2;
+  }
+}
+
+/*if on desktop, align right*/
+.my-h2 {
+  text-align: end;
+}
+
+/*if on mobile, center h2 elements on about*/
+@media screen and (max-width: 400px) {
+  h2 {
+    text-align: center !important;
+  }
+
+  .my-text-right {
+    margin-left: 1rem;
+    padding-top: 1rem;
+  }
+
+  .my-text-left {
+    margin-right: 1rem;
+    padding-top: 1rem;
+  }
+}
+
+/*if on mobile, top padding before text and remove left padding*/
+@media screen and (max-width: 400px) {
+  .my-text {
+    padding-top: 1rem;
+  }
+
+  .my-profile-text {
+    margin-right: 2rem;
+  }
 }
 
 .my-profile-img {
@@ -27,4 +80,17 @@ body {
 
 .my-hobby-img {
   border-radius: 2%;
+  height: 210px;
+}
+
+/* hover effects for the icons in the footer bar*/
+.my-icon {
+  fill: rgba(255, 255, 255, 0.71);
+  transition: 1s;
+}
+
+/*when hovering, change color to white and grow by 50%*/
+.my-icon:hover {
+  fill: rgb(255 255 255 / 100%);
+  scale: 1.5;
 }
